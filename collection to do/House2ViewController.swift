@@ -20,5 +20,9 @@ class House2ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func modoru(){
+        self.dismiss(animated: true, completion: nil)
+    }
 
 }

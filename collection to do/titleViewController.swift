@@ -15,6 +15,8 @@ class titleViewController: UIViewController {
     
 //    var Count: Int = 0
     
+//    @IBOutlet var countlabel: UILabel!
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -32,7 +34,18 @@ class titleViewController: UIViewController {
 //            print("音楽ファイルが読み込めませんでした")
 //        }
         
+//        countlabel.text = String("風船")
+        
+//        show()
+        
     }
+//    
+//    func show(){
+//        let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate //AppDelegateのインスタンスを取得
+//        let Count = appDelegate.kakunou
+//        countlabel.text = String(describing: Count)
+//    }
+//    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -49,7 +62,7 @@ class titleViewController: UIViewController {
         
         print(Count!)
         
-        if Count == 1{
+        if Count == 0 || Count == 1{
         self.performSegue(withIdentifier: "toHouseView", sender: nil)
         } else if Count == 2 {
             self.performSegue(withIdentifier: "toHouseView2", sender: nil)

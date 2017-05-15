@@ -38,6 +38,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
             todo.title = title
             todo.detailDescription = detailDescription
             todo.dueDate = dueDate as NSDate
+            todo.isDone = 0 
             
             let realm = try! Realm()
             try! realm.write {
@@ -48,18 +49,6 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
             print(Realm.Configuration.defaultConfiguration.fileURL?.absoluteString ?? "")
         }
         
-        //saveボタンを押した時のメッセージ
-        let alert = UIAlertController(
-            title: "保存完了",
-            message: "単語の準備が完了しました",
-            preferredStyle: .alert
-        )
-        alert.addAction(UIAlertAction(
-            title:"OK",
-            style: .default,
-            handler: nil
-        ))
-        self.present(alert, animated:true, completion: nil)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

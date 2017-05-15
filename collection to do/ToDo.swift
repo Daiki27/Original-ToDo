@@ -16,9 +16,10 @@ class ToDo: Object {
     dynamic var detailDescription: String = ""
     dynamic var createdAt: NSDate = NSDate()
     dynamic var dueDate: NSDate = NSDate()
+    dynamic var isDone: Int = 0 // 0なら未完了、1なら完了
     
+    // idをプライマリーキーに設定
     override static func primaryKey() -> String? {
-        
         return "id"
     }
     

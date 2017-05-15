@@ -147,26 +147,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9Z-P7-WPv">
-                                <rect key="frame" x="135" y="365" width="104" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.80186736680000004" green="0.96195042129999997" blue="0.77151402020000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="家へ"/>
-                                <connections>
-                                    <action selector="toHouseView" destination="EgY-e8-9u4" eventType="touchUpInside" id="VuN-CI-f9r"/>
-                                    <segue destination="Jqa-K1-BKM" kind="presentation" identifier="toHouseView" id="GIG-pf-FfZ"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nHD-gQ-3LZ">
-                                <rect key="frame" x="135" y="138" width="104" height="81"/>
+                                <rect key="frame" x="32" y="154" width="86" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="一覧へ"/>
                                 <connections>
                                     <action selector="toListView" destination="EgY-e8-9u4" eventType="touchUpInside" id="P3B-p3-jv2"/>
-                                    <segue destination="1ay-8f-5Gw" kind="presentation" identifier="toListView" id="6Sf-bD-WDz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9Z-P7-WPv">
+                                <rect key="frame" x="238" y="510" width="48" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="家へ"/>
+                                <connections>
+                                    <action selector="toHouseView" destination="EgY-e8-9u4" eventType="touchUpInside" id="VuN-CI-f9r"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -174,11 +170,13 @@
                     </view>
                     <connections>
                         <segue destination="DK2-Jj-W6g" kind="presentation" identifier="toHouseView2" id="bBg-VW-sp5"/>
+                        <segue destination="Jqa-K1-BKM" kind="presentation" identifier="toHouseView" id="n9H-vd-P8L"/>
+                        <segue destination="1ay-8f-5Gw" kind="presentation" identifier="toListView" id="ncL-z3-xq5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cR3-W0-4Wf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-943" y="600"/>
+            <point key="canvasLocation" x="-943.20000000000005" y="599.55022488755628"/>
         </scene>
         <!--House2 View Controller-->
         <scene sceneID="YaW-0a-SlA">
@@ -199,13 +197,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZV-pV-6gR">
+                                <rect key="frame" x="164" y="371" width="88" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="戻る"/>
+                                <connections>
+                                    <action selector="modoru" destination="DK2-Jj-W6g" eventType="touchUpInside" id="EOv-pc-Hdb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SYp-VX-s2v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1582" y="1107"/>
+            <point key="canvasLocation" x="1584.8" y="893.70314842578716"/>
         </scene>
         <!--House View Controller-->
         <scene sceneID="LVX-Ni-eVE">
@@ -235,7 +242,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R4x-pA-eE1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="718" y="1107"/>
+            <point key="canvasLocation" x="718" y="600"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ffY-YB-jOf">

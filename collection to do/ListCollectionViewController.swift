@@ -13,26 +13,48 @@ private let reuseIdentifier = "Cell"
 
 class ListCollectionViewController: UICollectionViewController, CellDelegate  {
     
-    var tapCount: Int = 0  //deleteをタップした回数を保存する変数
-    
     var todoes: Results<ToDo> = {
+
         let realm = try! Realm()
-        return realm.objects(ToDo.self)
+        let count = realm.objects(ToDo.self).filter("isDone == 0")
+        return count
     }()
     
-    //データの個数を返すメソッド
+    //セルの個数を返すメソッド
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section : Int) -> Int
     {
         return todoes.count;
     }
     
     //データを返すメソッド。セルの中身の表示の仕方の設定。
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath, cell: CollectionViewCell) -> UICollectionViewCell {
         
         let cell: CollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell //セルの再利用
         cell.delegate = self
         cell.titleLabel.text = todoes[indexPath.row].title
         return cell
+        
+//        do{
+//            let realm = try Realm()
+//            let count = realm.objects(ToDo.self).filter("isDone == 0")
+//            print(count)
+//            
+//            var ret: [ToDo] = []
+//            for todo in count {
+//                ret.append(todo)
+//            }
+//            
+//            let indexPath = self.collectionView?.indexPath( for: cell )
+//            
+//            let cell: CollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath!) as! CollectionViewCell //セルの再利用
+//            cell.delegate = self
+//            cell.titleLabel.text = ret[(indexPath?.row)!].title
+//            
+//        } catch {
+//            print(error)
+//        }
+//        
+//        return cell
     }
     
     //起動時に一回の処理
@@ -45,45 +67,33 @@ class ListCollectionViewController: UICollectionViewController, CellDelegate  {
         let nib = UINib(nibName: "CollectionViewCell", bundle: nil)
         collectionView?.register(nib, forCellWithReuseIdentifier: "Cell")
         
-        //初期化
-        //     self.initEveryone()
-        //
-        //        let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate //AppDelegateのインスタンスを取得
-        //        appDelegate.kakunou = tapCount
     }
     
-    //    func initEveryone() {
-    //        self.tapCount = 0
-    //    }
-    
-    
-    //kesuを押した時の処理。
+    //-ボタンを押した時の処理。
     func delete(cell: CollectionViewCell) {
         
         // IndexPathを取得
         let indexPath = self.collectionView?.indexPath( for: cell )
         
-        // realmデータ削除
+        //isDoneに１を代入
         do{
-        let realm = try Realm()
-        try realm.write {
-            realm.delete(todoes[(indexPath?.row)!])
+            let realm = try Realm() //defaultのRealmを取得
+            try realm.write {
+                todoes[(indexPath?.row)!].isDone = 1
             } } catch {
                 print(error)
         }
-    
-        //collectionviewから消す。
-        collectionView?.deleteItems(at: [indexPath!])
         
-        //タップした回数
-         self.tapCount += 1
-        
-        let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate //AppDelegateのインスタンスを取得
-        appDelegate.kakunou = tapCount
-        
-        print(appDelegate.kakunou!)
-        
+//        //isDoneが０を検索
+//        do{
+//            let realm = try Realm()
+//            let count = realm.objects(ToDo.self).filter("isDone == 0")
+//            print(count)
+//        } catch {
+//            print(error)
+//        }
     }
+    
     
     //警告を受け取ったときに呼ばれるメソッド
     override func didReceiveMemoryWarning() {

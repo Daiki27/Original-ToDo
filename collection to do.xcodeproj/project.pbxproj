@@ -22,9 +22,12 @@
 		0D17325F1EC0104C003E9F1E /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D17325D1EC0104C003E9F1E /* CollectionViewCell.xib */; };
 		0D1732741EC2270A003E9F1E /* clap.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0D1732731EC2270A003E9F1E /* clap.wav */; };
 		0D1732761EC22E17003E9F1E /* sky.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D1732751EC22E17003E9F1E /* sky.jpg */; };
+		0D2950241EC8C14100D69E01 /* ballon2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D2950231EC8C14100D69E01 /* ballon2.jpg */; };
 		0D3322451EC62C46000FC4B3 /* titleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3322441EC62C46000FC4B3 /* titleViewController.swift */; };
 		0D3322471EC62D6A000FC4B3 /* HouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3322461EC62D6A000FC4B3 /* HouseViewController.swift */; };
 		0D3322491EC828B6000FC4B3 /* House2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3322481EC828B6000FC4B3 /* House2ViewController.swift */; };
+		0D33224B1EC8BC8A000FC4B3 /* タイトル.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D33224A1EC8BC8A000FC4B3 /* タイトル.jpg */; };
+		0D33224D1EC8BFA1000FC4B3 /* ballon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D33224C1EC8BFA1000FC4B3 /* ballon.jpg */; };
 		69853F741300F774E7537FF9 /* Pods_collection_to_do.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE3A8EF52B4B08118F7047FE /* Pods_collection_to_do.framework */; };
 		ACFCA2E6306A2026DCB36785 /* Pods_collection_to_doTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA71B9E04C6E44EE7337C4D /* Pods_collection_to_doTests.framework */; };
 		F36E113C45736CE9C9B4094F /* Pods_collection_to_doUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 982335BB7EAF9B57C728CEB3 /* Pods_collection_to_doUITests.framework */; };
@@ -69,9 +72,12 @@
 		0D17325D1EC0104C003E9F1E /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		0D1732731EC2270A003E9F1E /* clap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clap.wav; sourceTree = "<group>"; };
 		0D1732751EC22E17003E9F1E /* sky.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sky.jpg; sourceTree = "<group>"; };
+		0D2950231EC8C14100D69E01 /* ballon2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ballon2.jpg; sourceTree = "<group>"; };
 		0D3322441EC62C46000FC4B3 /* titleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = titleViewController.swift; sourceTree = "<group>"; };
 		0D3322461EC62D6A000FC4B3 /* HouseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseViewController.swift; sourceTree = "<group>"; };
 		0D3322481EC828B6000FC4B3 /* House2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = House2ViewController.swift; sourceTree = "<group>"; };
+		0D33224A1EC8BC8A000FC4B3 /* タイトル.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "タイトル.jpg"; sourceTree = "<group>"; };
+		0D33224C1EC8BFA1000FC4B3 /* ballon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ballon.jpg; sourceTree = "<group>"; };
 		1708D0C5E32CC6977AEB08ED /* Pods-collection to do.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-collection to do.release.xcconfig"; path = "Pods/Target Support Files/Pods-collection to do/Pods-collection to do.release.xcconfig"; sourceTree = "<group>"; };
 		1FA71B9E04C6E44EE7337C4D /* Pods_collection_to_doTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_collection_to_doTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		207DC61B77D17A4B60DB6282 /* Pods-collection to doTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-collection to doTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-collection to doTests/Pods-collection to doTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +142,9 @@
 		0D1732231EBEF9DD003E9F1E /* collection to do */ = {
 			isa = PBXGroup;
 			children = (
+				0D2950231EC8C14100D69E01 /* ballon2.jpg */,
+				0D33224C1EC8BFA1000FC4B3 /* ballon.jpg */,
+				0D33224A1EC8BC8A000FC4B3 /* タイトル.jpg */,
 				0D1732751EC22E17003E9F1E /* sky.jpg */,
 				0D1732731EC2270A003E9F1E /* clap.wav */,
 				0D17325A1EBF7F53003E9F1E /* 風船.jpg */,
@@ -321,8 +330,11 @@
 				0D17322F1EBEF9DD003E9F1E /* LaunchScreen.storyboard in Resources */,
 				0D17322C1EBEF9DD003E9F1E /* Assets.xcassets in Resources */,
 				0D17325B1EBF7F53003E9F1E /* 風船.jpg in Resources */,
+				0D33224D1EC8BFA1000FC4B3 /* ballon.jpg in Resources */,
 				0D17322A1EBEF9DD003E9F1E /* Main.storyboard in Resources */,
+				0D33224B1EC8BC8A000FC4B3 /* タイトル.jpg in Resources */,
 				0D1732761EC22E17003E9F1E /* sky.jpg in Resources */,
+				0D2950241EC8C14100D69E01 /* ballon2.jpg in Resources */,
 				0D17325F1EC0104C003E9F1E /* CollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
