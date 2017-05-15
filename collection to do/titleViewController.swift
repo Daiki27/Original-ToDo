@@ -7,9 +7,17 @@
 //
 
 import UIKit
+import RealmSwift
 //import AVFoundation
 
 class titleViewController: UIViewController {
+    
+    var todoes: Results<ToDo> = {
+        
+        let realm = try! Realm()
+        let count = realm.objects(ToDo.self).filter("isDone == 1")
+        return count
+    }()
     
 //    var audioPlayer : AVAudioPlayer!
     
@@ -57,14 +65,13 @@ class titleViewController: UIViewController {
     
     @IBAction func toHouseView(){
         
-        let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate //AppDelegateのインスタンスを取得
-        let Count = appDelegate.kakunou
+        //todoes.count・・・完了したタスクの数
+
+        print(todoes.count)
         
-        print(Count!)
-        
-        if Count == 0 || Count == 1{
+        if todoes.count == 1{
         self.performSegue(withIdentifier: "toHouseView", sender: nil)
-        } else if Count == 2 {
+        } else if todoes.count == 2 {
             self.performSegue(withIdentifier: "toHouseView2", sender: nil)
         } else {
             self.performSegue(withIdentifier: "toHouseView", sender: nil)

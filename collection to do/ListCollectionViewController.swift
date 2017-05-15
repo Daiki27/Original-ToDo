@@ -27,34 +27,13 @@ class ListCollectionViewController: UICollectionViewController, CellDelegate  {
     }
     
     //データを返すメソッド。セルの中身の表示の仕方の設定。
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath, cell: CollectionViewCell) -> UICollectionViewCell {
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell: CollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell //セルの再利用
         cell.delegate = self
         cell.titleLabel.text = todoes[indexPath.row].title
         return cell
         
-//        do{
-//            let realm = try Realm()
-//            let count = realm.objects(ToDo.self).filter("isDone == 0")
-//            print(count)
-//            
-//            var ret: [ToDo] = []
-//            for todo in count {
-//                ret.append(todo)
-//            }
-//            
-//            let indexPath = self.collectionView?.indexPath( for: cell )
-//            
-//            let cell: CollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath!) as! CollectionViewCell //セルの再利用
-//            cell.delegate = self
-//            cell.titleLabel.text = ret[(indexPath?.row)!].title
-//            
-//        } catch {
-//            print(error)
-//        }
-//        
-//        return cell
     }
     
     //起動時に一回の処理
@@ -84,14 +63,6 @@ class ListCollectionViewController: UICollectionViewController, CellDelegate  {
                 print(error)
         }
         
-//        //isDoneが０を検索
-//        do{
-//            let realm = try Realm()
-//            let count = realm.objects(ToDo.self).filter("isDone == 0")
-//            print(count)
-//        } catch {
-//            print(error)
-//        }
     }
     
     
