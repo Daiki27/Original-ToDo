@@ -42,18 +42,8 @@ class titleViewController: UIViewController {
 //            print("音楽ファイルが読み込めませんでした")
 //        }
         
-//        countlabel.text = String("風船")
-        
-//        show()
         
     }
-//    
-//    func show(){
-//        let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate //AppDelegateのインスタンスを取得
-//        let Count = appDelegate.kakunou
-//        countlabel.text = String(describing: Count)
-//    }
-//    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -63,7 +53,7 @@ class titleViewController: UIViewController {
         self.performSegue(withIdentifier: "toListView", sender: nil)
     }
     
-    @IBAction func toHouseView(){
+    @IBAction func toHouseView(cell: CollectionViewCell){
         
         //todoes.count・・・完了したタスクの数
 

@@ -51,6 +51,7 @@ class ListCollectionViewController: UICollectionViewController, CellDelegate  {
     //-ボタンを押した時の処理。
     func delete(cell: CollectionViewCell) {
         
+        
         // IndexPathを取得
         let indexPath = self.collectionView?.indexPath( for: cell )
         
@@ -62,7 +63,10 @@ class ListCollectionViewController: UICollectionViewController, CellDelegate  {
             } } catch {
                 print(error)
         }
+    
         
+        loadView()
+        viewDidLoad()
     }
     
     
