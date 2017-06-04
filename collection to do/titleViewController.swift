@@ -53,19 +53,41 @@ class titleViewController: UIViewController {
         self.performSegue(withIdentifier: "toListView", sender: nil)
     }
     
-    @IBAction func toHouseView(cell: CollectionViewCell){
+    @IBAction func toHouseView(){
         
         //todoes.count・・・完了したタスクの数
-
         print(todoes.count)
         
-        if todoes.count == 1{
-        self.performSegue(withIdentifier: "toHouseView", sender: nil)
-        } else if todoes.count == 2 {
-            self.performSegue(withIdentifier: "toHouseView2", sender: nil)
-        } else {
+        let amari = todoes.count % 8
+        print(amari)
+        
+        switch amari {
+        case 0:
             self.performSegue(withIdentifier: "toHouseView", sender: nil)
+        case 1:
+            self.performSegue(withIdentifier: "toHouseView2", sender: nil)
+        case 2:
+            self.performSegue(withIdentifier: "toHouseView3", sender: nil)
+        case 3:
+            self.performSegue(withIdentifier: "toHouseView4", sender: nil)
+        case 4:
+            self.performSegue(withIdentifier: "toHouseView5", sender: nil)
+        case 5:
+            self.performSegue(withIdentifier: "toHouseView6", sender: nil)
+        case 6:
+            self.performSegue(withIdentifier: "toHouseView7", sender: nil)
+        case 7:
+            self.performSegue(withIdentifier: "toHouseView8", sender: nil)
+        default:
+            break
         }
+//        if todoes.count == 1{
+//        self.performSegue(withIdentifier: "toHouseView", sender: nil)
+//        } else if todoes.count == 2 {
+//            self.performSegue(withIdentifier: "toHouseView2", sender: nil)
+//        } else {
+//            self.performSegue(withIdentifier: "toHouseView", sender: nil)
+//        }
     }
 
 }

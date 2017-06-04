@@ -31,7 +31,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func save() {
         //duedateは常にデータがあるからif let 使わない。
-        if let title = titleTextField.text, let detailDescription = descriptionTextField.text, let dueDate: Date = dueDatePicker.date  {
+        if let title = titleTextField.text , let detailDescription = descriptionTextField.text, let dueDate: Date = dueDatePicker.date  {
             
             let todo = ToDo()
             todo.id = ToDo.lastId()
@@ -48,6 +48,19 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
             
             print(Realm.Configuration.defaultConfiguration.fileURL?.absoluteString ?? "")
         }
+        
+        //saveボタンを押した時のメッセージ
+        let alert = UIAlertController(
+            title: "保存完了",
+            message: "風船の準備が完了しました",
+            preferredStyle: .alert
+        )
+        alert.addAction(UIAlertAction(
+            title:"OK",
+            style: .default,
+            handler: nil
+        ))
+        self.present(alert, animated:true, completion: nil)
         
     }
     

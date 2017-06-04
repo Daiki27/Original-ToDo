@@ -1,16 +1,16 @@
 //
-//  HouseViewController.swift
+//  House4ViewController.swift
 //  collection to do
 //
-//  Created by 樋口大樹 on 2017/05/13.
+//  Created by 樋口大樹 on 2017/05/16.
 //  Copyright © 2017年 樋口大樹. All rights reserved.
 //
 
 import UIKit
 import RealmSwift
 
-class HouseViewController: UIViewController {
-    
+class House4ViewController: UIViewController {
+
     @IBOutlet var distance: UILabel!
     
     var todoes: Results<ToDo> = {
@@ -20,11 +20,10 @@ class HouseViewController: UIViewController {
         return count
     }()
     
-    //画面の起動時に一度のみ呼び出されるメソッド
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        distance.text = String(todoes.count * 10)
+distance.text = String(todoes.count * 10)
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,5 +34,14 @@ class HouseViewController: UIViewController {
     @IBAction func modoru(){
         self.dismiss(animated: true, completion: nil)
     }
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
 
 }

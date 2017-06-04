@@ -18,22 +18,21 @@
                 <rect key="frame" x="0.0" y="0.0" width="154" height="155"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ballon2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="0VV-6w-sRD">
-                        <rect key="frame" x="14" y="32" width="127" height="129"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bal4.png" translatesAutoresizingMaskIntoConstraints="NO" id="0VV-6w-sRD">
+                        <rect key="frame" x="0.0" y="0.0" width="154" height="161"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <gestureRecognizers/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAL-Xd-gjK">
-                        <rect key="frame" x="0.0" y="11" width="154" height="21"/>
+                        <rect key="frame" x="0.0" y="10" width="154" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4U-ii-gwC">
-                        <rect key="frame" x="103" y="108" width="42" height="39"/>
+                        <rect key="frame" x="104" y="107" width="42" height="39"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="0.80186736680000004" green="0.96195042129999997" blue="0.77151402020000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                         <state key="normal" title="−">
                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -54,6 +53,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="ballon2.jpg" width="262" height="262"/>
+        <image name="bal4.png" width="490" height="534"/>
     </resources>
 </document>

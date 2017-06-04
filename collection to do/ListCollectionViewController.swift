@@ -14,7 +14,6 @@ private let reuseIdentifier = "Cell"
 class ListCollectionViewController: UICollectionViewController, CellDelegate  {
     
     var todoes: Results<ToDo> = {
-
         let realm = try! Realm()
         let count = realm.objects(ToDo.self).filter("isDone == 0")
         return count
@@ -25,7 +24,7 @@ class ListCollectionViewController: UICollectionViewController, CellDelegate  {
     {
         return todoes.count;
     }
-    
+
     //データを返すメソッド。セルの中身の表示の仕方の設定。
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
@@ -59,14 +58,11 @@ class ListCollectionViewController: UICollectionViewController, CellDelegate  {
         do{
             let realm = try Realm() //defaultのRealmを取得
             try realm.write {
-                todoes[(indexPath?.row)!].isDone = 1
+                todoes[(indexPath?.row)!].isDone = 1 //isDoneの値を１にする。
+                collectionView?.deleteItems(at: [indexPath!])// CollectionViewから削除
             } } catch {
                 print(error)
         }
-    
-        
-        loadView()
-        viewDidLoad()
     }
     
     
